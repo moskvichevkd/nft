@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auxpo</title>
+    <link rel="stylesheet" href="css\normalize.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css\styles.css">
+</head>
+<body>
+    <div class="content">
+        <div class="content-sidebar">
+            <button class="content-sidebar__button" type="button">
+
+            </button>
+            <ul class="content-sidebar__list">
+                <li class="content-sidebar__item">
+                    <a class="content-sidebar__link content-sidebar__vk" target="_blank" href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <header class="content-header">
+            <a class="content-header__logo" href="#"></a>
+                <nav>
+                    <ul class="content-header__list">
+                        <li class="item"><a class="content-header__link active" href="#"> Home </a></li>
+                        <li class="item"><a class="content-header__link" href="#"> Roadmap </a></li>
+                        <li class="item"><a class="content-header__link" href="#"> About us </a></li>
+                        <li class="item"><a class="content-header__link wallet" href="#"></a></li>
+
+                    </ul>                        
+                </nav>
+        </header>
+        <main class="content-main">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <div class="swiper-footer">
+                          <div class="swiper-info">
+                              <p class="swiper-info__author">Maria Roman Generative</p>
+                              <p class="swiper-info__item">Token ID <span>1234567</span></p>
+                              <p class="swiper-info__item">Creator <span>1234567</span></p>
+                              <p class="swiper-info__item">Base price <span>1234567</span></p>
+                              <p class="swiper-info__item">Limit <span>1234567</span></p>
+                              <p class="swiper-info__item">Mint Date <span>1234567</span></p>
+                          </div>
+                          <div class="swiper-cover">
+                              <img class="swiper-cover__img" src="/images/eye.jpg" alt="">
+                          </div>
+                          <div class="swiper-body">
+                              <h2 class="swiper-body__title">Win <span> 3D printed </span> miniature model </h2>
+                              <p class="swiper-body__desc">Lorem ipsum dolor sit amet consectetur</p>
+                              <a href="#" class="swiper-body__btn swiper-body__buy">Buy now</a>
+                              <a href="#" class="swiper-body__btn swiper-body__view">View NFT</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="swiper-body">
+                        <div class="swiper-footer">
+                            <div class="swiper-info">
+                                <p class="swiper-info__author">Maria Roman Generative</p>
+                                <p class="swiper-info__item">Token ID <span>1234567</span></p>
+                                <p class="swiper-info__item">Creator <span>1234567</span></p>
+                                <p class="swiper-info__item">Base price <span>1234567</span></p>
+                                <p class="swiper-info__item">Limit <span>1234567</span></p>
+                                <p class="swiper-info__item">Mint Date <span>1234567</span></p>
+                            </div>
+                            <div class="swiper-cover">
+                                <img class="swiper-cover__img" src="/images/eye.jpg" alt="">
+                            </div>
+                            <div class="swiper-body">
+                                asdf
+                            </div>
+                        </div>  
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="swiper-body">
+                        <div class="swiper-footer">
+                            <div class="swiper-info">
+                                <p class="swiper-info__author">Maria Roman Generative</p>
+                                <p class="swiper-info__item">Token ID <span>1234567</span></p>
+                                <p class="swiper-info__item">Creator <span>1234567</span></p>
+                                <p class="swiper-info__item">Base price <span>1234567</span></p>
+                                <p class="swiper-info__item">Limit <span>1234567</span></p>
+                                <p class="swiper-info__item">Mint Date <span>1234567</span></p>
+                            </div>
+                            <div class="swiper-cover">
+                                <img class="swiper-cover__img" src="/images/eye.jpg" alt="">
+                            </div>
+                            <div class="swiper-body">
+                                asdf
+                            </div>
+                        </div>                            
+                      </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+          
+        </main>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var count = ['1' , '2' , '3']
+        var art = ['Julius Caesar' , 'Into the Abyss' , 'Discobolous']        
+        var price = ['221' , '157' , '95']
+        var swiper = new Swiper(".mySwiper", {
+          direction: "vertical",
+          effect: 'fade',
+            fadeEffect: {
+            crossFade: true
+            },
+          slidesPerView: 1,
+          spaceBetween: 30,
+          mousewheel: true,
+          pagination: 
+          {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+            return '<p class="' + className + '">' + ('#0' + (count[index])) + '<span class="pagination-art">' + (art[index]) + '</span>' + '<span class="pagination-price">' + '<span>' + ((price[index]) + ' ETH') + '</span>' + '</span>' + "<p>";
+          },
+          },
+        });
+      </script>
+  
+</body>
+</html>
